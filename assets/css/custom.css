@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
+
+/* Global: header logo "Billy" and "Maker" always white (overrides main.css .style2 etc.) */
+#header .logo strong {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+/* Minimal, light, and calm — homepage */
+
+body.homepage {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+  background-color: #f5f5f4;
+}
+
+body.homepage #wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+body.homepage h1,
+body.homepage h2,
+body.homepage h3,
+body.homepage h4 {
+  letter-spacing: 0.01em;
+}
+
+/* Header */
+
+body.homepage #header.alt {
+  background: #000000;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+  box-shadow: none;
+}
+
+body.homepage #header .logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+body.homepage #header .logo strong {
+  font-weight: 600;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+body.homepage #header .logo span {
+  opacity: 0.9;
+  color: #e5e7eb;
+}
+
+body.homepage #header .logo .tagline {
+  margin-left: 1.25rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+}
+
+body.homepage #header.reveal {
+  background: #000000;
+}
+
+body.homepage #header nav a {
+  color: #e5e7eb;
+}
+
+/* Project detail pages (same monochrome system) */
+
+body.project-page {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+  background-color: #f5f5f4;
+}
+
+body.project-page #wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+body.project-page h1,
+body.project-page h2,
+body.project-page h3,
+body.project-page h4 {
+  color: #111827;
+  letter-spacing: 0.01em;
+}
+
+/* Section header underline visible on light background */
+body.project-page header.major > :first-child:after {
+  background-color: #d1d5db;
+}
+
+/* Banner title (over hero image) — dark text for visibility on light banner background */
+body.project-page #banner h1,
+body.project-page #banner .major h1 {
+  color: #111827 !important;
+  mix-blend-mode: normal;
+}
+
+body.project-page #header {
+  background: #000000;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+  box-shadow: none;
+}
+
+body.project-page #header .logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+body.project-page #header .logo strong {
+  font-weight: 600;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+body.project-page #header .logo span {
+  opacity: 0.9;
+  color: #e5e7eb;
+}
+
+body.project-page #header nav a {
+  color: #e5e7eb;
+}
+
+body.project-page #header span {
+  color: #e5e7eb;
+}
+
+/* Buttons: visible on light background (View, Read, etc.) */
+body.project-page .button.next,
+body.project-page .button {
+  background-color: #111827 !important;
+  border-color: #111827 !important;
+  color: #f9fafb !important;
+  box-shadow: none;
+}
+body.project-page .button.next:hover,
+body.project-page .button:hover {
+  background-color: #030712 !important;
+  border-color: #030712 !important;
+  color: #f9fafb !important;
+}
+
+/* Replace #2e3450 dark background with light (spotlights sections) */
+body.project-page .spotlights > section,
+.spotlights > section {
+  background-color: #f9fafb !important;
+}
+
+/* Hero / banner */
+
+body.homepage #banner,
+body.project-page #banner {
+  background: #f4f4f5;
+  background-image: none;
+  background-attachment: scroll;
+  border-bottom: none;
+  margin-bottom: 0;
+  top: 0;
+  height: auto;
+  max-height: none;
+}
+
+body.homepage #banner:after,
+body.project-page #banner:after {
+  background-color: transparent;
+  opacity: 0;
+}
+
+body.homepage #banner.major {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 0 3.5rem 0;
+}
+
+/* Hello page: no header, so don't pull banner up */
+body.hello-page #banner {
+  top: 0;
+  margin-bottom: 0;
+}
+
+/* Hello page: LoveFrom-inspired — serif, statement-first, generous space */
+body.hello-page {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  background-color: #fafaf9;
+  color: #0a0a0a;
+}
+
+body.hello-page #wrapper {
+  background: none;
+  box-shadow: none;
+  min-height: 100vh;
+}
+
+body.hello-page #banner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: transparent;
+  background-image: none;
+}
+
+body.hello-page #banner:after {
+  display: none;
+}
+
+body.hello-page #banner .inner {
+  max-width: 32em;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+body.hello-page #banner .major h1 {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-size: clamp(2rem, 4vw + 1.25rem, 3.25rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: #0a0a0a;
+  margin-bottom: 1.5rem;
+}
+
+body.hello-page #banner .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+body.hello-page #banner .content p {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.5rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+}
+
+body.hello-page #banner .content p:last-child {
+  margin-bottom: 0;
+}
+
+body.hello-page .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 2px;
+  background: currentColor;
+  vertical-align: text-bottom;
+  animation: hello-cursor-blink 1s step-end infinite;
+}
+
+@keyframes hello-cursor-blink {
+  50% { opacity: 0; }
+}
+
+body.homepage #banner .inner,
+body.project-page #banner .inner {
+  max-width: 880px;
+}
+
+body.homepage #banner .major h1,
+body.project-page #banner .major h1 {
+  font-size: clamp(2.1rem, 2.4vw + 1.6rem, 3rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: #111827;
+}
+
+body.homepage #banner .eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #111827;
+  margin-bottom: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+}
+
+body.homepage #banner .eyebrow-dot {
+  display: none;
+}
+
+body.homepage #banner .content {
+  max-width: 34rem;
+}
+
+body.project-page #banner .content {
+  max-width: 34rem;
+  background-color: rgba(244, 244, 245, 0.94);
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+}
+
+body.homepage #banner .content p,
+body.project-page #banner .content p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+body.homepage #banner .content .subcopy {
+  font-size: 0.88rem;
+  color: #9ca3af;
+  margin-bottom: 1.8rem;
+}
+
+body.homepage #banner .actions .button {
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+body.homepage #banner .actions .button.next {
+  background-color: #111827;
+  border-color: #111827;
+  color: #f9fafb !important;
+}
+
+body.homepage #banner .actions .button.next:hover {
+  background-color: #030712;
+  border-color: #030712;
+}
+
+body.homepage #banner .actions .button.secondary {
+  border-radius: 999px;
+  border-color: #d1d5db;
+  background: transparent;
+  color: #374151 !important;
+}
+
+body.homepage #banner .actions .button.secondary:hover {
+  background: #f3f4f6;
+}
+
+body.homepage #banner .meta {
+  margin-top: 1.8rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+body.homepage #banner .meta span {
+  display: block;
+}
+
+/* Section: Projects grid */
+
+body.homepage #main,
+body.project-page #main {
+  padding-top: 0;
+  background-color: #f9fafb !important;
+}
+
+/* Project detail images in monochrome */
+
+body.project-page #banner .image img,
+body.project-page .image.fit img {
+  filter: grayscale(1);
+  transition: filter 180ms ease;
+}
+
+body.project-page #banner .image img:hover,
+body.project-page .image.fit img:hover {
+  filter: grayscale(0);
+}
+
+body.homepage #one.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  padding: 0 3rem 3.5rem 3rem;
+}
+
+@media screen and (max-width: 980px) {
+  body.homepage #one.tiles {
+    padding-inline: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  body.homepage #one.tiles {
+    padding-inline: 1.25rem;
+    gap: 1.5rem;
+  }
+}
+
+body.homepage #one.tiles article {
+  position: relative;
+  border-radius: 12px;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  width: auto;
+  padding: 0;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+body.homepage #one.tiles article:before,
+body.homepage #one.tiles article:after {
+  display: none !important;
+  content: none !important;
+}
+
+body.homepage #one.tiles article:hover {
+  transform: translateY(-4px);
+  border-color: #d1d5db;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+body.homepage #one.tiles article .image {
+  position: relative;
+  display: block !important;
+  overflow: hidden;
+}
+
+body.homepage #one.tiles article .image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition:
+    filter 180ms ease,
+    transform 180ms ease;
+}
+
+body.homepage #one.tiles article .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* semi-transparent grey so B&W image is visible */
+  opacity: 1;
+  transition: opacity 180ms ease;
+}
+
+body.homepage #one.tiles article:hover .image::after,
+body.homepage #one.tiles article:focus-within .image::after {
+  opacity: 0;
+}
+
+body.homepage #one.tiles article:hover .image img,
+body.homepage #one.tiles article:focus-within .image img {
+  filter: grayscale(0);
+}
+
+body.homepage #one.tiles article header.major {
+  position: relative;
+  padding: 1.25rem 1.35rem 1.4rem 1.35rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.homepage #one.tiles article h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+body.homepage #one.tiles article h3 a {
+  color: #111827 !important;
+  text-decoration: none;
+  border-bottom: none;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+body.homepage #one.tiles article h3 a:hover {
+  color: #0f766e;
+}
+
+body.homepage #one.tiles article p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #374151 !important;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+body.homepage #one.tiles article p span {
+  display: inline-block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+}
+
+/* Footer */
+
+body.homepage #footer {
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+body.project-page #footer {
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #374151;
+}
+
+body.project-page #footer .copyright,
+body.project-page #footer a {
+  color: #374151;
+}
+
+body.project-page #footer .icons a {
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+body.project-page #footer .icons a:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+body.homepage #footer .inner {
+  padding-top: 2.25rem;
+}
+
+body.homepage #footer .icons a {
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+}
+
+body.homepage #footer .icons a:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
