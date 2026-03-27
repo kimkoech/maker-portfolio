@@ -31,14 +31,16 @@
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Scripts — vanilla preload only (no Forty/jQuery stack on this page) -->
+			<script>
+				(function() {
+					window.addEventListener('load', function() {
+						window.setTimeout(function() {
+							document.body.classList.remove('is-preload');
+						}, 100);
+					});
+				})();
+			</script>
 			<script>
 				(function() {
 					var line1 = "Thoughtful systems at the intersection of hardware, software, and people.";
